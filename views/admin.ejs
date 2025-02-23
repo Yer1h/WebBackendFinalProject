@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">Home</a> |
+        <a href="/bmi">BMI</a> |
+        <a href="/weather">Weather</a> |
+        <a href="/nodemailer">Email</a> |
+        <a href="/blogs">Blogs</a> |
+        <a href="/qrcode">QR Code</a> |
+        <a href="/admin">Admin</a> |
+        <a href="/logout">Logout</a>
+    </nav>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <h2>Users</h2>
+        <ul>
+            <% users.forEach(user => { %>
+                <li><%= user.username %> - <%= user.role %> (Created: <%= user.createdAt.toLocaleDateString() %>)</li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

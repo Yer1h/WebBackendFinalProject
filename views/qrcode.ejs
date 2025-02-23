@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">Home</a> |
+        <a href="/bmi">BMI</a> |
+        <a href="/weather">Weather</a> |
+        <a href="/nodemailer">Email</a> |
+        <a href="/blogs">Blogs</a> |
+        <a href="/qrcode">QR Code</a> |
+        <a href="/admin">Admin</a> |
+        <a href="/logout">Logout</a>
+    </nav>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <form action="/qrcode/generate" method="post">
+            <input type="text" name="url" placeholder="Enter URL" required />
+            <button type="submit">Generate QR Code</button>
+        </form>
+        <% if (qrCode) { %>
+            <img src="<%= qrCode %>" alt="QR Code" style="margin-top: 20px; max-width: 100%;">
+        <% } %>
+        <% if (error) { %>
+            <p style="color: red;"><%= error %></p>
+        <% } %>
+    </div>
+</body>
+</html>

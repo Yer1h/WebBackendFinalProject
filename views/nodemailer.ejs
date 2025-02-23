@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Email</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">Home</a> |
+        <a href="/bmi">BMI</a> |
+        <a href="/weather">Weather</a> |
+        <a href="/nodemailer">Email</a> |
+        <a href="/blogs">Blogs</a> |
+        <a href="/qrcode">QR Code</a> |
+        <a href="/admin">Admin</a> |
+        <a href="/logout">Logout</a>
+    </nav>
+    <div class="container">
+        <h1>Send Email</h1>
+        <form action="/nodemailer/send" method="post">
+            <input type="email" name="toEmail" placeholder="Your Email Address" required>
+            <textarea name="messageText" placeholder="Enter your message" required></textarea>
+            <button type="submit">Send Email</button>
+        </form>
+        <% if (message) { %>
+            <p><%= message %></p>
+        <% } %>
+    </div>
+</body>
+</html>

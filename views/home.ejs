@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">My project for Finale</div>
+    <nav>
+        <a href="/home">Home</a> |
+        <a href="/bmi">BMI</a> |
+        <a href="/weather">Weather</a> |
+        <a href="/nodemailer">Email</a> |
+        <a href="/blogs">Blogs</a> |
+        <a href="/qrcode">QR Code</a> |
+        <a href="/admin">Admin</a> |
+        <a href="/logout">Logout</a>
+    </nav>
+    <div class="container">
+        <h1>Welcome, <%= user.username %></h1>
+        <p>Choose a project from the navigation bar above.</p>
+    </div>
+</body>
+</html>
